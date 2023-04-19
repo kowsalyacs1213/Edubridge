@@ -1,0 +1,35 @@
+
+<body>
+    
+<div class="container">
+	<input type="checkbox" id="chk" aria-hidden="true">
+	
+	<div class="form-container sign-in-container">
+		<form (ngSubmit)="bookinguser()">
+			<h1 style="color: rgba(29, 119, 146, 0.808);">Book Your Table</h1>
+			<input type="name" name="txt" placeholder="User name" ng-required="name" [(ngModel)]="books.name">
+			<input type="email" name="txt" placeholder="Email" ng-required="email" [(ngModel)]="books.email">
+			<input type="number" min="1" max="4" name="number" placeholder="No.of Table" ng-required="number" [(ngModel)]="books.number">
+            <input type="date" min="{{min}}" max="{{max}}" name="date" placeholder="Date" ng-required="date" [(ngModel)]="books.date">
+			<input type="time" name="time" placeholder="Time" ng-required="time" [(ngModel)]="books.time">
+			<button type="submit" class="btn btn-primary">BOOK</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			
+			<div class="overlay-panel overlay-right">
+				<h1 style="color: rgba(40, 134, 163, 0.808);">Tasty & Healthy Restaurant</h1>
+				<p>Celebrate your happy moments with us. <br> We will enhance the moment as delicious with our food.</p>
+				<button class="btn btn-primary" routerLink="/booked">continue>></button>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<p>
+		You can Book Your Table on Your Preferred timing, We are concern on your comfort.
+	</p>
+</footer>
+</body>
+
